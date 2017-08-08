@@ -34,14 +34,20 @@ After you have a reference to the module you can then call the available methods
 	
 	```js
 		var temp = require( "nativescript-temp-sms" );
-  		temp.sms(number,messageText);
+  		temp.sms(number,message);
     ```
+
+Methods:
+
+sms(number,message)
+
+Send sms on the background.
 
 Parameters: 
 
 number: SMS number to use.
 
-messageText: String to send.
+message: String to send.
 
 
 ## License
