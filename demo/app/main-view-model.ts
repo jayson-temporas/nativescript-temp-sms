@@ -9,6 +9,6 @@ export class HelloWorldModel extends Observable {
     super();
 
     this.tempSms = new TempSms();
-   	this.message = this.tempSms.sms("0912323123","Hello");
+   	this.message = this.tempSms.sms("09391822162","Hello");
   }
 }
