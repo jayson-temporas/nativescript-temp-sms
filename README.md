@@ -10,7 +10,9 @@ smsManager.sendTextMessage("0123232332",null,"Hello",null,null);
 
 To send sms without user interaction on Android your app must request permission to do so. The following must be in your app's AndroidManifest.xml
 
+```xml
 <uses-permission android:name="android.permission.SEND_SMS" />
+```
 
 ## Installation
 
@@ -35,6 +37,7 @@ After you have a reference to the module you can then call the available methods
 Parameters: 
 
 number: SMS number to use.
+
 messageText: String to send.
 
 
