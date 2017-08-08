@@ -1,6 +1,6 @@
 # nativescript-temp-sms
 
-Send sms using android's Sms Manager.
+Sending sms without user interaction.
 
 var smsManager = android.telephony.SmsManager.getDefault();
 
@@ -14,6 +14,8 @@ To send sms without user interaction on Android your app must request permission
 <uses-permission android:name="android.permission.SEND_SMS" />
 ```
 
+iOS sms feature will soon be implemented.
+
 ## Installation
 
 Install the plugin using the NativeScript CLI tooling
@@ -26,13 +28,14 @@ tns plugin add nativescript-temp-sms
 
 To use the module you must first require() it from your project's node_modules directory:
 
-var temp = require( "nativescript-temp-sms" );
+
 
 After you have a reference to the module you can then call the available methods.
 	
-	```javascript
-  			temp.sms(number,messageText);
-    ```)
+	```js
+		var temp = require( "nativescript-temp-sms" );
+  		temp.sms(number,messageText);
+    ```
 
 Parameters: 
 
@@ -43,4 +46,4 @@ messageText: String to send.
 
 ## License
 
-Apache License Version 2.0, January 2004
+MIT, 2017
