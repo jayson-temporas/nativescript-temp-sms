@@ -1,3 +1,1 @@
-export declare class TempSms {
-  sms(n,m): null;
-}
+export function sms(number,msg);

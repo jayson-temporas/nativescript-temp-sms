@@ -1,40 +1,43 @@
-# Your Plugin Name
+# nativescript-temp-sms
 
-Add your plugin badges here. See [nativescript-urlhandler](https://github.com/hypery2k/nativescript-urlhandler) for example.
+Send sms using android's Sms Manager.
 
-Then describe what's the purpose of your plugin. 
+var smsManager = android.telephony.SmsManager.getDefault();
 
-In case you develop UI plugin, this is where you can add some screenshots.
+smsManager.sendTextMessage("0123232332",null,"Hello",null,null);
 
 ## (Optional) Prerequisites / Requirements
 
-Describe the prerequisites that the user need to have installed before using your plugin. See [nativescript-firebase plugin](https://github.com/eddyverbruggen/nativescript-plugin-firebase) for example.
+To send sms without user interaction on Android your app must request permission to do so. The following must be in your app's AndroidManifest.xml
+
+<uses-permission android:name="android.permission.SEND_SMS" />
 
 ## Installation
 
-Describe your plugin installation steps. Ideally it would be something like:
+Install the plugin using the NativeScript CLI tooling
 
 ```javascript
-tns plugin add <your-plugin-name>
+tns plugin add nativescript-temp-sms
 ```
 
 ## Usage 
 
-Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
+To use the module you must first require() it from your project's node_modules directory:
+
+var temp = require( "nativescript-temp-sms" );
+
+After you have a reference to the module you can then call the available methods.
 	
 	```javascript
-    Usage code snippets here
+  			temp.sms(number,messageText);
     ```)
 
-## API
+Parameters: 
 
-Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
-    
-| Property | Default | Description |
-| --- | --- | --- |
-| some property | property default value | property description, default values, etc.. |
-| another property | property default value | property description, default values, etc.. |
-    
+number: SMS number to use.
+messageText: String to send.
+
+
 ## License
 
 Apache License Version 2.0, January 2004
