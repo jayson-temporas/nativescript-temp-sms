@@ -1,6 +1,6 @@
 # nativescript-temp-sms
 
-Warning: I don't have time to maintain and upgrade this app. If you want to implement it in IOS, just fork this repo and create your own plugin. Thanks.
+Warning: I don't have time to maintain and upgrade this plugin. If you want to implement it in IOS, just fork this repo and create your own plugin. Thanks.
 
 Sending sms without user interaction.
 
